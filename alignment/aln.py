@@ -2,7 +2,7 @@
 
 import argparse
 import numpy as np
-from fasta import DNASequence
+from fasta import Sequence
 
 STOP, DIAG, UP, LEFT = 0, 1, 2, 3
 
@@ -105,7 +105,7 @@ def main():
     print("Programm initiated")
     args = parse_args()
     #sequences = args.file
-    sequences = DNASequence.fasta_file(args.ifile)
+    sequences = Sequence.fasta_file(args.ifile)
 
     if args.needle:
         seq1 = sequences[args.seq1].seq
